@@ -1,13 +1,57 @@
+:root{
+    padding:0;
+margin:0;
+--animation-time: 3;
+height:auto;
+cursor: url("images/aintmuchsmall-small.jpg"), pointer;
+}
+
 .container{
-    background-color: darkolivegreen;
+    background-color: rgb(85, 107, 47);
     background-size: auto;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color: goldenrod
+    color: goldenrod;
+    margin:0 auto;
+}
+
+p{
+    margin:0 auto;
+    width: 50%;
+}
+
+ul{
+    margin:0 auto;
+    padding:0;
 }
 
 li{
     list-style: none;
+
+}
+ol{
+    margin: 0 auto;
+    padding:0;
+    counter-reset: item;
+    width: 50%;
+
+}
+
+ol > li{
+    margin: 0 auto;
+    padding:0 0 0 2em;
+    text-indent: -2em;
+    list-style-type: none;
+    counter-increment: item;
+}
+
+ol > li:before{
+    display:inline-block;
+    width: 1em;
+    padding-right: 0.5em;
+    font-weight: bold;
+    text-align: right;
+    content:counter(item) ".";
 }
 
 a:link, a:visited{
@@ -17,4 +61,28 @@ a:hover{
     color: darkgoldenrod;
 }
 
+header{
+    background-color: #425325;
+    box-shadow: 0px 2px 0px 0px #2e3a1a;
+    position: sticky;
+    top: 0;
+    left:0;
+    font-size: x-large;
+    margin:0 0;
 
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin-left: 0px;
+    padding:0px;
+    margin-right: auto;
+}
+
+header ul li{
+    display: inline-block;
+    padding:10px;
+    width: fit-content;
+    margin: 0 auto;
+}
